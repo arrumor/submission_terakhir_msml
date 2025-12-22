@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/submission_terakhir_msml/submission_terakhir_msml/Workflow-CI/MLProject_Folder/mlruns/948679567939459469/7585fa28de8a4648b62416e1491c967f/artifacts
+end_time: 1766420335944
+entry_point_name: ''
+experiment_id: '948679567939459469'
+lifecycle_stage: active
+run_id: 7585fa28de8a4648b62416e1491c967f
+run_name: mysterious-skink-45
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766420267210
+status: 3
+tags: []
+user_id: runner
