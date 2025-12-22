@@ -8,7 +8,7 @@ import pandas as pd
 
 
 # 1. Load Data (winequality_preprocessing.csv)
-df = pd.read_csv('Membangun_model/winequality_preprocessing.csv')
+df = pd.read_csv('winequality_preprocessing.csv')
 X = df.drop('quality', axis=1)
 # Ubah target menjadi biner: 1 jika kualitas > 6, 0 jika <= 6
 y = (df['quality'] > 6).astype(int)
@@ -36,7 +36,7 @@ for n in n_estimators_list:
                 run_name = f"RF_n{n}_d{depth}_split{min_split}_leaf{min_leaf}"
                 with mlflow.start_run(run_name=run_name):
                     # Log informasi dataset
-                    dataset_path = "Membangun_model/winequality_preprocessing.csv"
+                    dataset_path = "winequality_preprocessing.csv"
                     mlflow.log_param("dataset_name", "winequality_preprocessing.csv")
                     mlflow.log_param("dataset_path", dataset_path)
                     mlflow.log_artifact(dataset_path)
