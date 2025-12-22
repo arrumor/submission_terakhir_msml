@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 from sklearn.model_selection import train_test_split
 import pandas as pd
 
+
 # 1. Load Data (winequality_preprocessing.csv)
 df = pd.read_csv('Membangun_model/winequality_preprocessing.csv')
 X = df.drop('quality', axis=1)
