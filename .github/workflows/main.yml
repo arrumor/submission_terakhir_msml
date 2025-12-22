@@ -1,0 +1,42 @@
+name: MLflow Auto-Training  # Nama workflow Anda
+
+on:
+  push:
+    branches: [ "main" ]    # Trigger: Jalan setiap kali ada push ke branch main
+
+permissions:
+  contents: write           # Izin agar GitHub bisa push balik hasil training ke repo
+
+jobs:
+  run-training:
+    runs-on: ubuntu-latest  # Menggunakan server virtual Ubuntu milik GitHub
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3 # Mengambil kode dari repo Anda ke server virtual
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        pip install mlflow pandas scikit-learn
+        # Tambahkan library lain jika modelling.py membutuhkannya
+
+    - name: Run MLflow Project
+      run: |
+        # Masuk ke folder tempat MLProject berada
+        cd MLProject_Folder 
+        mlflow run . --no-conda 
+
+    - name: Commit and Push Results
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Tambahkan folder mlruns hasil training
+        git add .
+        git commit -m "chore: auto-update mlruns dari GitHub Actions" || echo "No changes"
+        git push
