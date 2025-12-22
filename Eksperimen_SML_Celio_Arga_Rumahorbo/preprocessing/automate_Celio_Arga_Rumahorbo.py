@@ -3,9 +3,6 @@ import numpy as np
 import os
 from sklearn.preprocessing import StandardScaler
 
-# ==========================================
-# 1. FUNGSI LOGIKA
-# ==========================================
 
 def load_data(file_path):
     """Load data dari CSV."""
@@ -58,10 +55,6 @@ def feature_engineering(df, target_col):
     # Gabung kembali X dan y
     return pd.concat([X_df, y.reset_index(drop=True)], axis=1)
 
-# ==========================================
-# 2. PIPELINE UTAMA
-# ==========================================
-
 def run_automation_pipeline(input_path, output_path, target_col):
     """Eksekusi seluruh proses preprocessing."""
     print(f"{'='*40}\n   START AUTOMATION\n{'='*40}")
@@ -82,14 +75,11 @@ def run_automation_pipeline(input_path, output_path, target_col):
     print(f"[SUCCESS] Saved to: {output_path}")
     print(f"[INFO] Final Shape: {df_clean.shape}\n{'='*40}")
 
-# ==========================================
-# 3. EKSEKUSI
-# ==========================================
 
 if __name__ == "__main__":
     # --- CONFIG ---
     RAW_FILE = 'winequality-red.csv'
-    CLEAN_FILE = 'winequality_clean.csv'
+    CLEAN_FILE = 'winequality_preprocessing.csv'
     TARGET = 'quality'
 
     # Ambil path file dari folder utama workspace
