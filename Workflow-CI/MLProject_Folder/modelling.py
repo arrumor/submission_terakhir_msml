@@ -20,7 +20,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 input_example = X_train[0:5]
 
 # Setup eksperimen
-mlflow.set_experiment("Eksperimen Model Hyperparameter Tuning")
+# mlflow.set_experiment("Eksperimen Model Hyperparameter Tuning")
 
 # Parameter tuning
 n_estimators_list = [10, 50, 100]
