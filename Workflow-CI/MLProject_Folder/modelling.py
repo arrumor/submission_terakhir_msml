@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 import os
 
+
 # Set penyimpanan MLflow ke folder lokal
 tracking_path = os.path.join(os.getcwd(), "mlruns")
 mlflow.set_tracking_uri(f"file://{tracking_path}")
