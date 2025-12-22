@@ -27,16 +27,15 @@ jobs:
 
     - name: Run MLflow Project
       run: |
-        # PINDAH KE PATH YANG SESUAI GAMBAR ANDA
         cd Workflow-CI/MLProject_Folder
-        mlflow run . --no-conda 
+        
+        mlflow run . --env-manager local
 
     - name: Commit and Push Results
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        # Tambahkan semua perubahan termasuk folder mlruns yang baru tercipta
         git add .
         git commit -m "Auto-update artifacts from GitHub Actions" || echo "No changes to commit"
         git push
