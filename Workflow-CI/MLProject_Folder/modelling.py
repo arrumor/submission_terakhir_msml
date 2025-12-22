@@ -35,7 +35,7 @@ for n in n_estimators_list:
             for min_leaf in min_samples_leaf_list:
                 run_name = f"RF_n{n}_d{depth}_split{min_split}_leaf{min_leaf}"
                 
-                with mlflow.start_run(run_name=run_name):
+                with mlflow.start_run(run_name=run_name, nested=True):
                     # Log info dataset
                     dataset = mlflow.data.from_pandas(df, source="winequality_preprocessing.csv")
                     mlflow.log_input(dataset, context="training")
