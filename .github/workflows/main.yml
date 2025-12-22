@@ -29,7 +29,7 @@ jobs:
       run: |
         cd Workflow-CI/MLProject_Folder
         
-        mlflow run . --env-manager local
+        mlflow run . --env-manager local --experiment-name "Eksperimen Model Hyperparameter Tuning"
 
     - name: Commit and Push Results
       run: |
