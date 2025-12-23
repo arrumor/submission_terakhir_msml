@@ -1,0 +1,10 @@
+artifact_location: file:///home/runner/work/submission_terakhir_msml/submission_terakhir_msml/Workflow-CI/MLProject_Folder/mlruns/948679567939459469/models/m-0897169144404a46a80c674fb57c972f/artifacts
+creation_timestamp: 1766531111193
+experiment_id: '948679567939459469'
+last_updated_timestamp: 1766531112946
+model_id: m-0897169144404a46a80c674fb57c972f
+model_type: null
+name: model_random_forest
+source_run_id: 8f1d2eb584894b93bc21f434d0f41129
+status: 2
+status_message: null

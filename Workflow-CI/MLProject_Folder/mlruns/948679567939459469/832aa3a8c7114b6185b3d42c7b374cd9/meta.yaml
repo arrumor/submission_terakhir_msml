@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/submission_terakhir_msml/submission_terakhir_msml/Workflow-CI/MLProject_Folder/mlruns/948679567939459469/832aa3a8c7114b6185b3d42c7b374cd9/artifacts
+end_time: 1766531129851
+entry_point_name: ''
+experiment_id: '948679567939459469'
+lifecycle_stage: active
+run_id: 832aa3a8c7114b6185b3d42c7b374cd9
+run_name: RF_n10_dNone_split5_leaf2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766531128016
+status: 3
+tags: []
+user_id: runner
