@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/submission_terakhir_msml/submission_terakhir_msml/Workflow-CI/MLProject_Folder/mlruns/948679567939459469/cd84ee61de204694b600c7e379f61aca/artifacts
+end_time: 1766531204833
+entry_point_name: ''
+experiment_id: '948679567939459469'
+lifecycle_stage: active
+run_id: cd84ee61de204694b600c7e379f61aca
+run_name: delightful-rat-792
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766531134485
+status: 3
+tags: []
+user_id: runner
