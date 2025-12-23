@@ -12,7 +12,7 @@ tracking_path = os.path.join(os.getcwd(), "mlruns")
 mlflow.set_tracking_uri(f"file://{tracking_path}")
 
 # Load dan bagi data
-df = pd.read_csv('Workflow-CI/MLProject_Folder/winequality_preprocessing.csv')
+df = pd.read_csv('MLProject_Folder/winequality_preprocessing.csv')
 X = df.drop('quality', axis=1)
 y = (df['quality'] > 6).astype(int) # Target biner
 X_train, X_test, y_train, y_test = train_test_split(
@@ -38,7 +38,7 @@ for n in n_estimators_list:
                 
                 with mlflow.start_run(run_name=run_name, nested=True):
                     # Log info dataset
-                    dataset = mlflow.data.from_pandas(df, source="Workflow-CI/MLProject_Folder/winequality_preprocessing.csv")
+                    dataset = mlflow.data.from_pandas(df, source="MLProject_Folder/winequality_preprocessing.csv")
                     mlflow.log_input(dataset, context="training")
                     mlflow.log_param("dataset_name", "winequality_preprocessing.csv")
 
